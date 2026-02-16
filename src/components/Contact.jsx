@@ -73,7 +73,7 @@ const Contact = () => {
                                 <FaEnvelope size={20} />
                                 <span>goliakash710@gmail.com</span>
                             </a>
-                            <a href="https://linkedin.com/in/goliakash" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-gray-300 hover:text-electric-blue transition-colors">
+                            <a href="https://www.linkedin.com/in/goli-akash-02382b245" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-gray-300 hover:text-electric-blue transition-colors">
                                 <FaLinkedin size={20} />
                                 <span>LinkedIn Profile</span>
                             </a>

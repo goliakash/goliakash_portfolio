@@ -61,7 +61,7 @@ const Navbar = () => {
                         <a href="https://github.com/goliakash" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                             <FaGithub size={20} />
                         </a>
-                        <a href="https://linkedin.com/in/goliakash" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
+                        <a href="https://www.linkedin.com/in/goli-akash-02382b245" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
                             <FaLinkedin size={20} />
                         </a>
                     </div>
