@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaAws, FaDocker, FaPython, FaLinux, FaShieldAlt } from 'react-icons/fa';
+import { FaAws, FaDocker, FaPython, FaLinux, FaShieldAlt,FaGoogle } from 'react-icons/fa';
 import { SiKubernetes, SiTerraform, SiJenkins, SiBurpsuite, SiWireshark, SiGnubash, SiMysql } from 'react-icons/si';
 
 const Skills = () => {
@@ -8,8 +8,8 @@ const Skills = () => {
         {
             category: "Cloud",
             items: [
-                { name: 'AWS (EC2, S3)', icon: <FaAws /> },
-                { name: 'IAM / VPC', icon: <FaAws /> },
+                { name: 'AWS (EC2, S3,IAM / VPC)', icon: <FaAws /> },
+                { name: 'GCP', icon: <FaGoogle /> },
             ]
         },
         {
