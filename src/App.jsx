@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,38 +9,38 @@ import Experience from './components/Experience';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import IntroSplash from './components/IntroSplash';
 
 function App() {
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        // Simulate loading time for initial animations to be smoother
-        const timer = setTimeout(() => {
-            setLoading(false);
-        }, 1000);
-        return () => clearTimeout(timer);
-    }, []);
-
-    if (loading) {
-        return (
-            <div className="h-screen w-full bg-[#0D0D0D] flex items-center justify-center">
-                <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-electric-blue"></div>
-            </div>
-        );
-    }
+    const [showIntro, setShowIntro] = useState(true);
 
     return (
-        <div className="bg-cyber-black min-h-screen">
-            <Navbar />
-            <Hero />
-            <About />
-            <Skills />
-            <Projects />
-            <Experience />
-            <Certifications />
-            <Contact />
-            <Footer />
-        </div>
+        <>
+            <AnimatePresence>
+                {showIntro && (
+                    <IntroSplash onComplete={() => setShowIntro(false)} />
+                )}
+            </AnimatePresence>
+
+            {!showIntro && (
+                <motion.div
+                    className="bg-cyber-black min-h-screen"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8, ease: 'easeOut' }}
+                >
+                    <Navbar />
+                    <Hero />
+                    <About />
+                    <Skills />
+                    <Projects />
+                    <Experience />
+                    <Certifications />
+                    <Contact />
+                    <Footer />
+                </motion.div>
+            )}
+        </>
     );
 }
 
