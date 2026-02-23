@@ -25,13 +25,16 @@ const About = () => {
                         viewport={{ once: true }}
                     >
                         <h3 className="text-2xl font-semibold text-gray-200 mb-6">
-                            Cloud Engineer & <span className="text-blue-400">Security Enthusiast</span>
+                            Cloud & DevOps Engineer | <span className="text-blue-400">DevSecOps Enthusiast</span>
                         </h3>
                         <p className="text-gray-400 leading-relaxed mb-6">
-                            I am a passionate Cloud Engineer and DevSecOps enthusiast dedicated to building secure, scalable, and resilient infrastructure. My journey involves orchestrating containerized applications, automating deployment pipelines, and ensuring security at every layer of the stack.
+                            I’m <span className="text-white font-semibold">Goli Akash</span>, I'm<span className="text-white font-semibold"></span> Passionate about building <span className="text-white font-semibold">secure, scalable, and efficient cloud solutions</span>. My interest in technology goes beyond writing code — I’m deeply curious about how systems operate behind the scenes and how they can be optimized and secured for real-world environments.
+                        </p>
+                        <p className="text-gray-400 leading-relaxed mb-6">
+                            I have hands-on experience with <span className="text-white font-semibold">AWS services</span>, <span className="text-white font-semibold">DevOps tools</span>, and <span className="text-white font-semibold">cybersecurity fundamentals</span>, and I enjoy working on projects that combine <span className="text-white font-semibold">automation, monitoring, and infrastructure security</span>. My focus is on <span className="text-white font-semibold">Cloud Security and DevSecOps</span>, where I aim to design systems that are not only high-performing but secure by design.
                         </p>
                         <p className="text-gray-400 leading-relaxed">
-                            With a deep understanding of cloud platforms and security protocols, I strive to bridge the gap between development and operations while prioritizing the integrity and availability of systems.
+                            Through projects, labs, and self-driven exploration, I constantly refine my skills in <span className="text-white font-semibold">cloud architecture, security practices</span>, and <span className="text-white font-semibold">emerging technologies like AI integration</span> in cloud environments.
                         </p>
                     </motion.div>
 
