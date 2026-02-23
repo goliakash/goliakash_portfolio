@@ -10,12 +10,14 @@ import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import IntroSplash from './components/IntroSplash';
+import ScrollProgress from './components/ScrollProgress';
 
 function App() {
     const [showIntro, setShowIntro] = useState(true);
 
     return (
         <>
+            <ScrollProgress />
             <AnimatePresence>
                 {showIntro && (
                     <IntroSplash onComplete={() => setShowIntro(false)} />

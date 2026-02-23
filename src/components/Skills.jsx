@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaAws, FaDocker, FaPython, FaLinux, FaShieldAlt,FaGoogle } from 'react-icons/fa';
+import { FaAws, FaDocker, FaPython, FaLinux, FaShieldAlt, FaGoogle } from 'react-icons/fa';
 import { SiKubernetes, SiTerraform, SiJenkins, SiBurpsuite, SiWireshark, SiGnubash, SiMysql } from 'react-icons/si';
 
 const Skills = () => {
@@ -80,19 +80,23 @@ const Skills = () => {
                             variants={container}
                             initial="hidden"
                             whileInView="show"
-                            viewport={{ once: true }}
-                            className="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-electric-blue/50 transition-colors duration-300"
+                            viewport={{ once: true, margin: "-100px" }}
+                            className="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-electric-blue/50 transition-all duration-300 group"
                         >
-                            <h3 className="text-xl font-semibold text-white mb-6 border-b border-white/10 pb-2">{skillGroup.category}</h3>
+                            <h3 className="text-xl font-semibold text-white mb-6 border-b border-white/10 pb-2 group-hover:text-electric-blue transition-colors">{skillGroup.category}</h3>
                             <div className="flex flex-wrap gap-3">
                                 {skillGroup.items.map((skill, idx) => (
                                     <motion.span
                                         key={idx}
                                         variants={item}
-                                        whileHover={{ scale: 1.05 }}
-                                        className="px-3 py-1 bg-black/40 rounded-full text-gray-300 text-sm border border-white/5 flex items-center gap-2 hover:text-electric-blue hover:border-electric-blue/30 transition-all cursor-default"
+                                        whileHover={{
+                                            scale: 1.1,
+                                            backgroundColor: 'rgba(0, 191, 255, 0.1)',
+                                            borderColor: 'rgba(0, 191, 255, 0.5)'
+                                        }}
+                                        className="px-3 py-1.5 bg-black/40 rounded-full text-gray-300 text-sm border border-white/5 flex items-center gap-2 hover:text-electric-blue transition-all cursor-default"
                                     >
-                                        <span className="text-electric-blue">{skill.icon}</span>
+                                        <span className="text-electric-blue group-hover:animate-pulse">{skill.icon}</span>
                                         {skill.name}
                                     </motion.span>
                                 ))}

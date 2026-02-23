@@ -9,6 +9,17 @@ const Hero = () => {
             {/* Background Elements */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-cyber-black to-cyber-black"></div>
+
+                {/* Cyber Grid */}
+                <div
+                    className="absolute inset-0 opacity-20"
+                    style={{
+                        backgroundImage: `linear-gradient(to right, #00BFFF 1px, transparent 1px), linear-gradient(to bottom, #00BFFF 1px, transparent 1px)`,
+                        backgroundSize: '4rem 4rem',
+                        maskImage: 'radial-gradient(ellipse at center, black, transparent 80%)'
+                    }}
+                ></div>
+
                 {/* Animated blobs */}
                 <motion.div
                     animate={{

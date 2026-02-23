@@ -64,22 +64,22 @@ const ProjectCard = ({ project, index }) => {
             </div>
 
             <div className="p-6 relative z-20">
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-electric-blue transition-colors">{project.title}</h3>
+                <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-electric-blue transition-colors">{project.title}</h3>
+                    <div className="flex gap-2">
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                            <FaGithub size={20} />
+                        </a>
+                    </div>
+                </div>
                 <p className="text-gray-400 mb-4 line-clamp-3">{project.description}</p>
 
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, idx) => (
-                        <span key={idx} className="px-2 py-1 bg-white/5 text-xs text-electric-blue rounded border border-electric-blue/20">
+                        <span key={idx} className="px-2 py-0.5 bg-electric-blue/10 text-[10px] text-electric-blue rounded border border-electric-blue/20">
                             {tag}
                         </span>
                     ))}
-                </div>
-
-                <div className="flex gap-4">
-                    <a href={project.github} className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                        <FaGithub /> GitHub
-                    </a>
-                    
                 </div>
             </div>
         </motion.div>
