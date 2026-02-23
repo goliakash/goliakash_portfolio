@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaAws, FaDocker, FaPython, FaLinux, FaShieldAlt, FaGoogle } from 'react-icons/fa';
-import { SiKubernetes, SiTerraform, SiJenkins, SiBurpsuite, SiWireshark, SiGnubash, SiMysql } from 'react-icons/si';
+import { FaAws, FaDocker, FaPython, FaLinux, FaShieldAlt, FaGoogle, FaGitAlt } from 'react-icons/fa';
+import { SiKubernetes, SiTerraform, SiJenkins, SiBurpsuite, SiWireshark, SiGnubash, SiMysql, SiYaml, SiSnyk } from 'react-icons/si';
 
 const Skills = () => {
     const skills = [
         {
             category: "Cloud",
             items: [
-                { name: 'AWS (EC2, S3,IAM / VPC)', icon: <FaAws /> },
+                { name: 'AWS', icon: <FaAws /> },
                 { name: 'GCP', icon: <FaGoogle /> },
             ]
         },
@@ -19,10 +19,20 @@ const Skills = () => {
                 { name: 'Kubernetes', icon: <SiKubernetes /> },
                 { name: 'Terraform', icon: <SiTerraform /> },
                 { name: 'Jenkins', icon: <SiJenkins /> },
+                { name: 'Git', icon: <FaGitAlt /> },
             ]
         },
         {
-            category: "Security",
+            category: "DevSecOps",
+            items: [
+                { name: 'Snyk', icon: <SiSnyk /> },
+                { name: 'Checkov', icon: <FaShieldAlt /> },
+                { name: 'Trivy', icon: <FaShieldAlt /> },
+                { name: 'SonarQube', icon: <FaShieldAlt /> },
+            ]
+        },
+        {
+            category: "Cybersecurity",
             items: [
                 { name: 'Nmap', icon: <FaLinux /> },
                 { name: 'Metasploit', icon: <FaShieldAlt /> },
@@ -37,6 +47,7 @@ const Skills = () => {
                 { name: 'Python', icon: <FaPython /> },
                 { name: 'Bash', icon: <SiGnubash /> },
                 { name: 'SQL', icon: <SiMysql /> },
+                { name: 'YAML', icon: <SiYaml /> },
             ]
         }
     ];
@@ -73,7 +84,7 @@ const Skills = () => {
                     <div className="w-20 h-1 bg-electric-blue mx-auto rounded-full"></div>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
                     {skills.map((skillGroup, index) => (
                         <motion.div
                             key={index}
